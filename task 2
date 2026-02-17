@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int binomial(int n, int k) {
+	if (n ==k ) 
+	{
+		return 1;
+	}
+	else if(k==0)
+	{
+		return 1;
+	}
+	else 
+	{
+		return binomial(n - 1, k - 1) + binomial(n - 1, k);
+	}
+
+}
+int main() {
+	int num1, num2;
+	cout << "Enter number 1: ";
+	cin >> num1;
+	cout << "Enter number 2: ";
+	cin >> num2;
+	if (num1 >= 0 && num2 >= 0) {
+		cout << "Binomial " << binomial(num1, num2);
+	}
+	else {
+		cout<<"one or more entries are negative "<<endl;
+	}
+}
