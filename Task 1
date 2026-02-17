@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int Print(int n) 
+{
+	cout << n << " ";
+	if (n == 0) 
+	{
+		return 0;
+	}
+	else 
+	{
+		return Print(n - 1);
+	}
+}
+
+int main() 
+{
+	int num;
+	cout << "Enter a positive number: ";
+	cin >> num;
+	if (num >= 0) {
+		Print(num);
+	}
+	else {
+		cout << "number is negative" << endl;
+	}
+}
